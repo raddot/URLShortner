@@ -4,9 +4,10 @@ USE urlshortener;
 CREATE TABLE IF NOT EXISTS urls (
     id           BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     short_code   VARCHAR(16)     NOT NULL,
-    original_url TEXT            NOT NULL,
+    long_url     TEXT            NOT NULL,
     created_at   TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     expires_at   TIMESTAMP       NULL,
+    click_count  INT             NOT NULL DEFAULT 0,
     PRIMARY KEY (id),
     UNIQUE KEY uk_short_code (short_code),
     KEY idx_expires_at (expires_at)

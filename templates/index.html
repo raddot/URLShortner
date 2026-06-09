@@ -8,10 +8,22 @@
 <body>
     <div class="container">
         <h1>URL Shortner</h1>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+
         <form action="/" method="post">
             <input type="url" name="url" placeholder="Enter your long URL" required>
             <button type="submit">Shorten</button>
         </form>
+
+        {% if result %}
+        <div class="result">
+            <p><strong>Short URL:</strong> <a href="{{ result.short_url }}">{{ result.short_url }}</a></p>
+            <p><strong>Expires:</strong> {{ result.expires_at }}</p>
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>

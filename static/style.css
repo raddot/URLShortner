@@ -1,0 +1,42 @@
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.container h1 {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type="url"] {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.error {
+    color: #b00020;
+    margin-bottom: 1rem;
+}
+
+.result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f4f8;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+.result a {
+    color: #0066cc;
+}
